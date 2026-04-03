@@ -12,7 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "kachi": "nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",

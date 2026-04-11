@@ -42,7 +42,7 @@ exports.createProductwithEmail = async (req, res) => {
   }
 };
 
-
+//added image implementation 
 
 
 exports.updateProductImage = async (req, res) => {

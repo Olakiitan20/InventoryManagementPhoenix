@@ -2,6 +2,11 @@
 const User = require('../models/userModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+<<<<<<< HEAD
+=======
+const sendEmail = require("../middleware/emailSender");
+
+>>>>>>> 6d6b559329ebb165eada2c3e052e14e9987cbeb6
 
 
 exports.createUser = async (req, res) => {
@@ -83,6 +88,22 @@ exports.login = async (req, res) => {
             { expiresIn: '1d' }
         );
 
+<<<<<<< HEAD
+=======
+         const subject = "New Login Alert";
+            const message = `
+              <h3>Hey ${user.name} 🚀</h3>
+              <p>We just noticed a login into your accout:</p>
+              <ul>
+                <li><strong>Location:</strong> Ikeja Lagos</li>
+                <li><strong>Device:</strong> Chrome 8.5</li>
+              </ul>
+            <p>Thank you for banking with us</p>
+            `;
+        
+              await sendEmail(user.email, subject, message);
+
+>>>>>>> 6d6b559329ebb165eada2c3e052e14e9987cbeb6
         res.json({
             message: 'Login successful',
             token,
